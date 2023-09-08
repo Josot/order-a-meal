@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Het Kroket Loket</title>
+  </head>
+  <body
+    class="h-screen bg-slate-100 md:overflow-hidden"
+    style="font-family: 'Poppins', sans-serif"
+    onload="loadData(), shoppingCartRender()"
+  >
+    <div id="header" class="h-20 w-full bg-blue-500 text-white shadow-sm">
+      <a href="#" class="align-center float-left ml-8 flex">
+        <img src="images/logo.png" class="h-20" alt="Het Kroket Loket Logo" />
+      </a>
+      <div
+        id="header_redirects"
+        class="float-right mt-6 mr-[6rem] hidden space-x-4 text-xl font-semibold sm:block"
+      >
+        <a href="menu">Menu</a>
+        <a href="bestel">Bestellen</a>
+        <a href="info">Info</a>
+      </div>
+      <div
+        id="mobile_burger_items"
+        class="absolute top-[80px] z-30 hidden h-screen w-[300px] flex-col items-center gap-4 bg-blue-500 text-2xl font-semibold transition-all"
+      >
+        <a class="mt-8" href="menu">Menu</a>
+        <a href="bestel">Bestellen</a>
+        <a href="info">Info</a>
+      </div>
+      <div id="header_redirects_mobile">
+        <div
+          id="header_redirects_mobile__burger"
+          class="absolute top-[20px] right-[1.5rem] h-[36px] w-[36px] cursor-pointer rounded-md bg-white sm:hidden"
+          onclick="openMobileMenu()"
+        >
+          <div
+            id="header_redirects_mobile_burger_lines"
+            class="z-10 block sm:hidden"
+          >
+            <div
+              id="header_redirects_mobile_burger_lines__line1"
+              class="absolute top-[6px] left-[4px] h-[5px] w-[28px] rounded-md bg-blue-500"
+            ></div>
+            <div
+              id="header_redirects_mobile_burger_lines__line2"
+              class="absolute top-[16px] left-[2px] h-[5px] w-[32px] rounded-md bg-blue-500"
+            ></div>
+            <div
+              id="header_redirects_mobile_burger_lines__line3"
+              class="absolute top-[26px] left-[4px] h-[5px] w-[28px] rounded-md bg-blue-500"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <div id="shopping_cart">
+        <a href="afronden">
+          <img
+            src="images/shopping-cart.png"
+            class="absolute right-[5rem] top-5 h-[36px] invert sm:right-[2.5rem]"
+            alt="Shopping Cart"
+          />
+          <div
+            id="shopping_cart__producten"
+            class="absolute right-[4.5rem] top-[16px] h-[20px] w-[20px] rounded-full bg-white text-black sm:right-[2rem]"
+          >
+            <div
+              id="shopping_cart__render"
+              class="relative bottom-[2px] grid place-items-center font-normal text-blue-500"
+            ></div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div
+      class="grid h-[200px] place-items-center border-y-white"
+      id="banner_image"
+    >
+      <img
+        class="-z-10 h-[200px] w-full object-cover object-center blur-[2px] saturate-50"
+        src="images/index_header_image.jpg"
+      />
+      <img class="absolute h-[200px]" src="images/logo.png" alt="Logo" />
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2" id="container">
+      <div>
+        <div>
+          <img class="h-full" src="./images/kroket.png" />
+        </div>
+      </div>
+      <div class="bg-gray-200">
+        <div id="corona_header">
+          <h2 class="mt-2 text-center text-2xl font-bold text-blue-500">
+            CORONA TIJD
+          </h2>
+          <div id="corona_border" class="grid place-items-center">
+            <div class="h-1 w-1/2 bg-blue-300"></div>
+          </div>
+        </div>
+        <div id="corona_text"></div>
+        <p class="p-4 text-xs">
+          Beste gasten,<br /><br />
+
+          Wij begrijpen dat het momenteel niet makkelijk is om uit eten te gaan
+          vanwege de Corona pandemie. Om onze klanten toch de mogelijkheid te
+          bieden om te genieten van onze heerlijke kroketten, hebben wij een
+          nieuw fijnproevermenu samengesteld voor groepen van 2, 4 of zelfs 6
+          personen.<br /><br />
+
+          Ons fijnproevermenu biedt u de mogelijkheid om verschillende smaken
+          kroketten te proeven, gecombineerd met bijpassende bijgerechten en
+          drankjes. Zo kunt u in een ontspannen sfeer genieten van de culinaire
+          hoogstandjes die ons kroket restaurant te bieden heeft.<br /><br />
+
+          Onze kroketten worden met de grootste zorg en alleen met de beste
+          ingrediënten bereid, zodat u kunt genieten van een unieke
+          smaakbeleving. Onze menukaart biedt een ruime keuze aan verschillende
+          smaken kroketten, van traditionele rundvleeskroketten tot aan
+          vegetarische kroketten met tomaat en mozzarella<br /><br />
+
+          Of u nu komt met uw partner, vrienden of familie, ons fijnproevermenu
+          biedt voor ieder wat wils. U kunt zelf kiezen welke smaken kroketten u
+          wilt proeven en wij zorgen voor bijpassende bijgerechten en
+          drankjes.<br /><br />
+
+          Wij doen er alles aan om uw bezoek aan ons restaurant zo veilig en
+          plezierig mogelijk te maken. Uiteraard houden wij ons aan de geldende
+          Corona-maatregelen en hebben wij extra maatregelen genomen om uw
+          veiligheid te waarborgen.<br /><br />
+
+          Wij hopen u snel te mogen verwelkomen in ons kroket restaurant en u te
+          laten genieten van onze heerlijke fijnproevermenu.<br /><br />
+
+          Met vriendelijke groet,<br /><br />
+          Het team van het Kroket Loket.
+        </p>
+      </div>
+    </div>
+    <footer class="md:h-screen">
+      <div class="bottom-0 h-[80px] w-full bg-blue-500 md:absolute">
+        <div class="grid place-items-center font-semibold text-white">
+          <p>&copy; Het Kroket Loket 2023</p>
+          <p>Made by</p>
+          <p>Joost van Ewijk, Lucas de Bie en Luca Kuiper</p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/localStorage.js"></script>
+    <script src="js/shoppingCart.js"></script>
+    <script src="js/openMobileMenu.js"></script>
+    <!-- <script src="js/menuItems.js"></script> -->
+    <!-- <script src="js/addProduct.js"></script> -->
+  </body>
+</html>

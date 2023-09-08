@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Het Kroket Loket - MENU</title>
+  </head>
+  <body
+    class="bg-slate-100"
+    style="font-family: 'Poppins', sans-serif"
+    onload="loadData(), shoppingCartRender(), renderMenuItems(), renderDrankjes()"
+  >
+    <div id="header" class="h-20 w-full bg-blue-500 text-white shadow-sm">
+      <a href="../" class="align-center float-left ml-8 flex">
+        <img
+          src="../images/logo.png"
+          class="h-20"
+          alt="Het Kroket Loket Logo"
+        />
+      </a>
+      <div
+        id="header_redirects"
+        class="float-right mt-6 mr-[6rem] hidden space-x-4 text-xl font-semibold sm:block"
+      >
+        <a
+          href="../menu"
+          class="rounded-lg border-b-2 border-solid border-y-white"
+          >Menu</a
+        >
+        <a href="../bestel">Bestellen</a>
+        <a href="../info">Info</a>
+      </div>
+      <div
+        id="mobile_burger_items"
+        class="absolute top-[80px] z-30 hidden h-screen w-[300px] flex-col items-center gap-4 bg-blue-500 text-2xl font-semibold transition-all"
+      >
+        <a class="mt-8" href="../menu">Menu</a>
+        <a href="../bestel">Bestellen</a>
+        <a href="../info">Info</a>
+      </div>
+      <div id="header_redirects_mobile">
+        <div
+          id="header_redirects_mobile__burger"
+          class="absolute top-[20px] right-[1.5rem] h-[36px] w-[36px] cursor-pointer rounded-md bg-white sm:hidden"
+          onclick="openMobileMenu()"
+        >
+          <div
+            id="header_redirects_mobile_burger_lines"
+            class="z-10 block sm:hidden"
+          >
+            <div
+              id="header_redirects_mobile_burger_lines__line1"
+              class="absolute top-[6px] left-[4px] h-[5px] w-[28px] rounded-md bg-blue-500"
+            ></div>
+            <div
+              id="header_redirects_mobile_burger_lines__line2"
+              class="absolute top-[16px] left-[2px] h-[5px] w-[32px] rounded-md bg-blue-500"
+            ></div>
+            <div
+              id="header_redirects_mobile_burger_lines__line3"
+              class="absolute top-[26px] left-[4px] h-[5px] w-[28px] rounded-md bg-blue-500"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <div id="shopping_cart">
+        <a href="../afronden">
+          <img
+            src="../images/shopping-cart.png"
+            class="absolute right-[5rem] top-5 h-[36px] invert sm:right-[2.5rem]"
+            alt="Shopping Cart"
+          />
+          <div
+            id="shopping_cart__producten"
+            class="absolute right-[4.5rem] top-[16px] h-[20px] w-[20px] rounded-full bg-white text-black sm:right-[2rem]"
+          >
+            <div
+              id="shopping_cart__render"
+              class="relative bottom-[2px] grid place-items-center font-normal text-blue-500"
+            ></div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div id="container" class="ml-[10%] w-[80%] text-center">
+      <div id="menu_items" class="m-8">
+        <p class="text-3xl font-bold">Menu's</p>
+        <div id="menu_items_render" class="grid grid-cols-3"></div>
+      </div>
+      <div id="drankjes" class="m-8">
+        <p class="text-3xl font-bold">Drankjes</p>
+        <div id="drankjes_render" class="grid grid-cols-3"></div>
+      </div>
+    </div>
+    <script src="../js/localStorage.js"></script>
+    <script src="../js/shoppingCart.js"></script>
+    <script src="../js/openMobileMenu.js"></script>
+    <script src="../js/renderItems.js"></script>
+    <script src="../js/menuItems.js"></script>
+  </body>
+</html>
